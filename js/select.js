@@ -1,11 +1,13 @@
 const playerLength = [];
 
+
 function displayName(allPlayer) {
-    console.log(allPlayer);
     const playerField = document.getElementById('select-field')
+    const allBtn = document.getElementsByClassName('btn-disable')
     playerField.innerHTML = "";
     for (let i = 0; i < playerLength.length; i++) {
         if (playerLength.length >= 6) {
+            allBtn.disabled = true;
             break
         }
         let serial = i + 1;
@@ -23,6 +25,9 @@ function displayName(allPlayer) {
 function addToSelect(element) {
     const playerName = element.parentNode.children[0].innerText;
     playerLength.push(playerName)
+    element.disabled = true
 
     displayName(playerLength)
 }
+
+
