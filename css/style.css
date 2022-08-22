@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.header-txt {
+    font-family: 'Indie Flower', cursive;
+}
+
+.header-view {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
