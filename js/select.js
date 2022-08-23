@@ -1,19 +1,20 @@
-const playerLength = [];
+const playerArray = [];
 
 
 function displayName(allPlayer) {
     const playerField = document.getElementById('select-field')
 
 
-    if (playerLength.length >= 6) {
-        alert('you can add only 5 player,reload The site again plz...')
+    if (playerArray.length >= 6) {
+        alert('You already select 5 player')
+        playerArray.pop()
         return;
     } else {
         playerField.innerHTML = "";
     }
-    for (let i = 0; i < playerLength.length; i++) {
+    for (let i = 0; i < playerArray.length; i++) {
         let serial = i + 1;
-        let index = playerLength[i];
+        let index = playerArray[i];
         const p = document.createElement('p')
         p.innerText = `
         ${serial}   ${index}
@@ -25,10 +26,10 @@ function displayName(allPlayer) {
 
 function addToSelect(element) {
     const playerName = element.parentNode.children[0].innerText;
-    playerLength.push(playerName)
+    playerArray.push(playerName)
     element.disabled = true
 
-    displayName(playerLength)
+    displayName(playerArray)
 }
 
 
