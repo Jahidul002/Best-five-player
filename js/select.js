@@ -3,16 +3,14 @@ const playerLength = [];
 
 function displayName(allPlayer) {
     const playerField = document.getElementById('select-field')
-    const allBtn = document.getElementsByClassName('btn-disable')
     playerField.innerHTML = "";
     for (let i = 0; i < playerLength.length; i++) {
         if (playerLength.length >= 6) {
-            allBtn.disabled = true;
+            alert('you can add only 5 player,reload The site again plz...(আসল কথা কেন রিমুভ হচ্চে বুঝতাসি না,তাই রিলোড দিতে বললাম ;-)')
             break
         }
         let serial = i + 1;
         let index = playerLength[i];
-        // console.log();
         const p = document.createElement('p')
         p.innerText = `
         ${serial}   ${index}

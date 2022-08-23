@@ -10,6 +10,13 @@ body {
     font-family: 'Indie Flower', cursive;
 }
 
+.bg-img {
+    background-image: url(./bg-img.jpg);
+    background-size: cover;
+    height: 65vh;
+    margin-bottom: 10%;
+}
+
 .header-view {
     height: 60vh;
     display: flex;
