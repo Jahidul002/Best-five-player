@@ -1,5 +1,6 @@
 var cost = [];
 document.getElementById('calculate-btn').addEventListener('click', function () {
+
     const perPlayerField = getFieldValueById('per-PlayerField');
     const playerAmmount = playerLength.length
 
@@ -14,11 +15,13 @@ document.getElementById('total-btn').addEventListener('click', function () {
     const managerField = getFieldValueById('manager-field');
     const coachField = getFieldValueById('coach-field');
 
+
     const totalBalance = document.getElementById('total-balance');
     const blnString = totalBalance.innerText;
 
-    const prevEx = cost[0]
+    const prevEx = cost[0];
     const totalCost = prevEx + managerField + coachField
 
     totalBalance.innerText = totalCost;
+
 })

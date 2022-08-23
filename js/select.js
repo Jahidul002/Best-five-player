@@ -3,12 +3,15 @@ const playerLength = [];
 
 function displayName(allPlayer) {
     const playerField = document.getElementById('select-field')
-    playerField.innerHTML = "";
+
+
+    if (playerLength.length >= 6) {
+        alert('you can add only 5 player,reload The site again plz...')
+        return;
+    } else {
+        playerField.innerHTML = "";
+    }
     for (let i = 0; i < playerLength.length; i++) {
-        if (playerLength.length >= 6) {
-            alert('you can add only 5 player,reload The site again plz...(আসল কথা কেন রিমুভ হচ্চে বুঝতাসি না,তাই রিলোড দিতে বললাম ;-)')
-            break
-        }
         let serial = i + 1;
         let index = playerLength[i];
         const p = document.createElement('p')
